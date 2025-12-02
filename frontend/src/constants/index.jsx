@@ -19,7 +19,7 @@ export const CATEGORY_ICONS = {
     "Personal Development": "🧠"
 };
 
-export const BASE_URL = "hhttps://lumina-ai-hub.onrender.com";
+export const BASE_URL = "https://lumina-ai-hub.onrender.com";
 
 export const MarkdownComponents = {
     h1: (props) => <h1 className="text-2xl font-bold text-gray-900 dark:text-white mt-4 mb-2 " {...props} />,
