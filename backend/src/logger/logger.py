@@ -37,16 +37,14 @@ class LoggerFactory:
 
         logger = logging.getLogger(name)
 
-        # Avoid duplicate handlers
         if logger.handlers:
             return logger
 
         logger.setLevel(level)
 
-        # daily log file (UTC timestamp)
+        self.log_dir.mkdir(parents=True, exist_ok=True)
         log_file = self.log_dir / f"{datetime.utcnow():%Y-%m-%d}.log"
 
-        # attach handlers
         logger.addHandler(self._create_console_handler(level))
         logger.addHandler(self._create_file_handler(log_file, level))
 
