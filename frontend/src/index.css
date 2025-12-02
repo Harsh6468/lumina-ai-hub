@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+* {
+    transition: width 0.7s ease;
+}
+/* Add this to your existing CSS */
+table, table *, 
+thead, thead *,
+tbody, tbody *,
+tr, tr *,
+td, td *,
+th, th * {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    cursor: default !important;
+}
+
+/* Keep selection enabled for code blocks */
+.code-block-wrapper * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: text;
+}
